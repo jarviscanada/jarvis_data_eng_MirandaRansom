@@ -9,7 +9,7 @@ db_password=$3
 sudo systemctl status docker || sudo systemctl start docker
 
 #check container status
-container_status=$(docker container inspect -f '{{.State.Status}}' jrvs-psql)
+container_status=$(docker container inspect -f '{{.State.Status}}' jrvs-other)
 
 #switch case to handle create|stop|start options
 case $cmd in
@@ -17,7 +17,7 @@ case $cmd in
     echo 'create selected'
 
     #check if container is already created
-    if [ $container_status -eq 0 ]; then
+    if [ -n "$container_status" ]; then
       echo 'container already exists'
       exit 1
     fi
@@ -30,16 +30,23 @@ case $cmd in
 
     #create container
     echo 'creating container'
+
     ;;
   start|stop)
     echo 'start or stop selected'
 
-    if [ "$container_status" = "running" ]; then
-      echo 'Stopping container'
+    if [ -z "$container_status" ]; then
+      echo "Container does not exist"
     fi
 
-    if [ "$container_status" = "stopped" ]; then
+    if [ "$container_status" = "running" ]; then
+      echo 'Stopping container'
+      docker container stop jrvs-psql
+    fi
+
+    if [ "$container_status" = "exited" ]; then
       echo 'Starting container'
+      docker container start jrvs-psql
     fi
     ;;
   *)
