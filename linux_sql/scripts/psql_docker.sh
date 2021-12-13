@@ -9,7 +9,7 @@ db_password=$3
 sudo systemctl status docker || sudo systemctl start docker
 
 #check container status
-container_status=$(docker container inspect -f '{{.State.Status}}' jrvs-other)
+container_status=$(docker container inspect -f '{{.State.Status}}' jrvs-psql)
 
 #switch case to handle create|stop|start options
 case $cmd in
@@ -30,6 +30,14 @@ case $cmd in
 
     #create container
     echo 'creating container'
+    #create new volume if not exist
+    docker volume create pgdata
+    #create a container using psql image with name jrvs-psql
+    docker run --name jrvs-psql -e POSTGRES_PASSWORD="$db_password" -d -v pgdata:/var/lib/postgresql/data -p 5432:5432 postgres:9.6-alpine
+    #install psql CLI client
+    sudo yum install -y postgresql
+    #connect to psql instance using psql REPL
+    psql -h localhost -U postgres createuser "$db_username" -d postgres -W
 
     ;;
   start|stop)
@@ -37,16 +45,19 @@ case $cmd in
 
     if [ -z "$container_status" ]; then
       echo "Container does not exist"
+      exit 1
     fi
 
     if [ "$container_status" = "running" ]; then
       echo 'Stopping container'
       docker container stop jrvs-psql
+      exit 0
     fi
 
     if [ "$container_status" = "exited" ]; then
       echo 'Starting container'
       docker container start jrvs-psql
+      exit 0
     fi
     ;;
   *)
