@@ -29,6 +29,14 @@ FROM
     host_info;
 
 -- avrerage memory used in 5 minute intervals
-SELECT host_usage.host_id, round5(host_usage.time_stamp), AVG( percentMemInUse(host_info.total_mem, host_usage.memory_free))
+SELECT host_usage.host_id,
+       round5(host_usage.time_stamp),
+       AVG( percentMemInUse(host_info.total_mem, host_usage.memory_free))
 FROM host_usage, host_info
 GROUP BY round5(host_usage.time_stamp), host_usage.host_id;
+
+-- detect failure (data points < 5 in 5 minute interval)
+SELECT host_id, round5(time_stamp), COUNT(*) as num_data_points
+FROM host_usage
+GROUP BY round5(time_stamp), host_id
+HAVING COUNT(*) < 5;
