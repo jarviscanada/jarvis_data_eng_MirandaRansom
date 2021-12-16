@@ -7,7 +7,7 @@ END;
 $$
     LANGUAGE PLPGSQL;
 
--- funciton to take total and free memory & return percent of memory used
+-- function to take total and free memory & return percent of memory used
 CREATE FUNCTION percentMemInUse(total integer, free real) RETURNS real AS
 $$
 BEGIN
@@ -28,7 +28,7 @@ SELECT cpu_number,
 FROM
     host_info;
 
--- avrerage memory used in 5 minute intervals
+-- average memory used in 5 minute intervals
 SELECT host_usage.host_id,
        round5(host_usage.time_stamp),
        AVG( percentMemInUse(host_info.total_mem, host_usage.memory_free))
