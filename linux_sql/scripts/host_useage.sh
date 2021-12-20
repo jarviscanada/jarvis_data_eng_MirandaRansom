@@ -25,10 +25,7 @@ disk_available=$(echo "$df_out" |tail -1 | awk '{print $4}' | xargs)
 
 #find host id from hist_info
 export PGPASSWORD=$psql_password
-query_id_stmt="(SELECT id FROM host_info WHERE hostname='$hostname')";
 host_id=$(psql -h $psql_host -p $psql_port -d $psql_dbName -U $psql_user -t -c "SELECT id FROM host_info WHERE hostname='$hostname'")
-
-echo id $host_id
 
 #psql host_usage  insert
 insert_stmt="INSERT INTO host_usage(time_stamp, host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available)
