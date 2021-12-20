@@ -23,7 +23,7 @@ SELECT cpu_number,
        ROW_NUMBER() over(
            PARTITION BY cpu_number
            ORDER BY
-               total_mem
+               total_mem DESC
            )
 FROM
     host_info;
@@ -35,8 +35,8 @@ SELECT host_usage.host_id,
 FROM host_usage, host_info
 GROUP BY round5(host_usage.time_stamp), host_usage.host_id;
 
--- detect failure (data points < 5 in 5 minute interval)
+-- detect failure (data points < 3 in 5 minute interval)
 SELECT host_id, round5(time_stamp), COUNT(*) as num_data_points
 FROM host_usage
 GROUP BY round5(time_stamp), host_id
-HAVING COUNT(*) < 5;
+HAVING COUNT(*) < 3;
