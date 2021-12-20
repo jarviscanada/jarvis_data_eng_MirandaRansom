@@ -23,7 +23,7 @@ cpu_kernel=$(vmstat --unit M | tail -1 | awk '{print $13}' | xargs)
 disk_io=$(echo "$vmstat_mb" |tail -1| awk '{print $10}'| xargs)
 disk_available=$(echo "$df_out" |tail -1 | awk '{print $4}' | xargs)
 
-#find host id from hist_info
+#find host id from host_info
 export PGPASSWORD=$psql_password
 host_id=$(psql -h $psql_host -p $psql_port -d $psql_dbName -U $psql_user -t -c "SELECT id FROM host_info WHERE hostname='$hostname'")
 
