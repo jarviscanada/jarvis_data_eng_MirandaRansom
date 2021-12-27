@@ -1,11 +1,11 @@
 # Preferred name (Characters only)
-name: "John Smith"
+name: "Miranda Ransom"
 # Your GitHub repo root URL
-github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_demo
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_MirandaRansom
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis a orci ac malesuada. Vivamus ligula elit, viverra eu ante porttitor, blandit convallis augue. Aliquam justo justo, mollis at lacus eu, rutrum finibus est. Vestibulum venenatis purus id accumsan pretium. In efficitur magna nec enim laoreet tincidunt. Ut libero metus, scelerisque nec eros vitae, sagittis pellentesque enim. Donec dictum felis volutpat, vehicula magna eu, imperdiet elit. Phasellus ut velit a massa efficitur faucibus. Sed volutpat, lacus sed sagittis luctus, elit.
+summary: I joined Jarvis right after graduatating with my BCS[H] - Computer Science from the Univerristy of Windsor. I've aimed to join my theoretical background with practical applicatioin through my exteracurriculars such as hackathons and joning the Google Developers Student Club as a core member. I've also had the opperunity to work with a local-non profit as part of their tech team developing a MERN stack application with the main goal of data collection and analysis. Looking forward I'm excited to solve problems through software, build things, and continue learning in such a vast field.
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
@@ -19,18 +19,18 @@ skills:
     - Git
   # At least 5 skills
   competent:
-    - Donec
-    - fermentum
-    - Donec
-    - fermentum
-    - Donec
+    - Data structures and algorithms
+    - Javascript
+    - React
+    - MongoDB (NoSQL)
+    - C
   # At least 5 skills
   familiar:
-    - Donec
-    - fermentum
-    - fermentum
-    - fermentum
-    - fermentum
+    - CSS
+    - Kotlin / Android development
+    - C#
+    - Python
+    - Networking
 
 # List of Jarvis projects
 jarvis_projects:
@@ -38,13 +38,13 @@ jarvis_projects:
     git_url: "/linux_sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+    description: "This project is used to log linux data and tracks potential outages. The script running on the network switch collects hardware and usage data from the nodes and logs them into a postgresql database. The nodes send hardware data on start up and then usage data every minute by the use of a crontab. An outage is detected when a node has not sent at least 3 data points in the past 5 minutes found via an SQL select query."
   - name: "Core Java Apps"
     git_url: "/core_java"
     description:
-      - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-      - "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-      - "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      - "Twitter App:"
+      - "JDBC App:"
+      - "Grep App:"
   - name: "Springboot App"
     git_url: "/springboot"
     description: ""
@@ -65,14 +65,14 @@ jarvis_projects:
 # Feel free to add more projects
 highlighted_projects:
     #project name
-  - name: "Web app for resturant"
+  - name: "Ensamble: a web app for band and musician matching"
     #URL is optional
-    git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
+    git_url: "https://github.com/miranda0129/band-meetup-website"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
-  - name: "Machine Learning"
-    git_url:
-    description: Suspendisse a tincidunt odio. Suspendisse posuere luctus aliquet. Quisque magna tellus, tempor vitae arcu sed, volutpat scelerisque lacus. Aliquam varius pulvinar dapibus. Ut a tincidunt sem. Aenean sollicitudin fringilla erat ut imperdiet. Phasellus fermentum, enim vitae laoreet elementum, eros nisl hendrerit lorem.
+    description: Utalizing basic web technologies such as HTML, CSS, Javascript and PHP Ensamble is a web app for bands to post ads looking for other musicians to collaborate with and musicians to find gigs and collaborators.
+  - name: "The Hype Machine"
+    git_url: "https://devpost.com/software/the-hype-machine"
+    description: The Hype Machine is a fun and silly hackathon project exploring the SonicPi language in which you can code music. A python scripts determines if an electric longboard is moving and when it is, plays the SonicPi coded music file.
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
@@ -83,28 +83,25 @@ professional_experience:
     company: "Jarvis"
     duration: "2020-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
-  - title: "Tutor"
-    company: "XYZ Company"
-    duration: "2019"
-    description: "Donec mattis sed justo et sagittis. Vestibulum lacinia nulla ipsum. Curabitur imperdiet nibh vitae leo lacinia laoreet. Nullam accumsan, lectus ut maximus ultricies, augue justo egestas mi, vel bibendum felis."
+    description: "Complete SCRUM tickets under the agile methodology to build out multiple projects.  Projects include a cluster monitor focusing on strengthening Linux and RDBMS skills."
+  - title: "Tech Team Member"
+    company: "Windsor Essex Community Compassion Care"
+    duration: "2020-2021"
+    description: "Build out an all encompassing MERN stack web application to aid in business needs. My focus was on the front end working with React, Material UI, Survey.js and Chart.js to design components (pages) to aid in user profiles, data collection, and analysis."
+  - title: "Teaching Assistant"
+    company: "University of Windsor"
+    duration: "2020-2021"
+    description: "Held weekly office hours to aid students in understanding material and debugging code.  Duties also included marking assignments while providing meaningful feedback and virtual in-class assistance"
 
 #List of edcuation
 education: 
-  - school_name: "XYZ university"
-    duration: "2012-2016"
-    degree: "Bachelor of Applied Sciences"
-    department: "Electrical and Computer Engineering"
+  - school_name: "University of Windsor"
+    duration: "2017-2021"
+    degree: "Bachelor Computer Science [Honours]"
+    department: "Computer Science"
     # optional
-    awards_achievements: 
-      - "Scholarship"
-      - "Dean's List (2015, 2016): Ut enim ad minim veniam"
-      - "GPA: 3.8/4.0"
-  - school_name: "XYZ university"
-    duration: "2016-2018"
-    degree: "Master of Engineering"
-    department: "Electrical and Computer Engineering"
-    awards_achievements: 
+    awards_achievements:
+      - "GPA: 84%"
 
 #Optional section
 others:
@@ -112,12 +109,9 @@ others:
   - title: "Certificates"
     #list of items
     bullets:
-      - "Udacity Machine Learning (2019)"
-  - title: "Awards"
-    bullets:
-      - "Winner"
+      - "LinkedIn PowerBI Essential Training (2020)"
   - title: "Activities/Hobbies"
     bullets:
-      - "Basketball player"
-      - "Competitive gaming"
-      - "Volunteer, ABC Food bank: Ut enim ad minim veniam"
+      - "Guitarist"
+      - "Fiction and Non-fiction reader"
+      - "Intentional Living"
