@@ -13,7 +13,7 @@
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_MirandaRansom",
   "highlighted_projects": [
     {
-      "description": "Utalizing basic web technologies such as HTML, CSS, Javascript and PHP Ensamble is a web app for bands to post ads looking for other musicians to collaborate with and musicians to find gigs and collaborators.",
+      "description": "Utalizing basic web technologies such as HTML, CSS, Javascript and PHP, Ensamble is a web app for bands to post ads looking for other musicians to collaborate with and musicians to find gigs and collaborators.",
       "git_url": "https://github.com/miranda0129/band-meetup-website",
       "name": "Ensamble: a web app for band and musician matching"
     },
@@ -75,8 +75,7 @@
     {
       "bullets": [
         "Guitarist",
-        "Fiction and Non-fiction reader",
-        "Intentional Living"
+        "Fiction and Non-fiction reader"
       ],
       "title": "Activities/Hobbies"
     }
@@ -124,5 +123,5 @@
       "Git"
     ]
   },
-  "summary": "I joined Jarvis right after graduatating with my BCS[H] - Computer Science from the Univeristy of Windsor. I've aimed to join my theoretical background with practical applicatioin through my exteracurriculars such as hackathons and joning the Google Developers Student Club as a core member. I've also had the opperunity to work with a local-non profit as part of their tech team developing a MERN stack application with the main goal of data collection and analysis. Looking forward I'm excited to solve problems through software, build things, and continue learning in such a vast field."
+  "summary": "I joined Jarvis right after graduatating with my BCS[H] - Computer Science from the Univeristy of Windsor. I've aimed to join my theoretical background with practical application through my exteracurriculars such as hackathons and joning the Google Developers Student Club as a core member. I've also had the opperunity to work with a local-non profit as part of their tech team developing a MERN stack application with the main goal of data collection and analysis. Looking forward I'm excited to solve problems through software, build things, and continue learning in such a vast field."
 }
