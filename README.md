@@ -1,6 +1,6 @@
 # Miranda Ransom . Jarvis Consulting
 
-I joined Jarvis right after graduatating with my BCS[H] - Computer Science from the Univerristy of Windsor. I've aimed to join my theoretical background with practical applicatioin through my exteracurriculars such as hackathons and joning the Google Developers Student Club as a core member. I've also had the opperunity to work with a local-non profit as part of their tech team developing a MERN stack application with the main goal of data collection and analysis. Looking forward I'm excited to solve problems through software, build things, and continue learning in such a vast field.
+I joined Jarvis right after graduatating with my BCS[H] - Computer Science from the University of Windsor. I've aimed to join my theoretical background with practical application through my exteracurriculars such as hackathons and joning the Google Developers Student Club as a core member. I've also had the opperunity to work with a local-non profit as part of their tech team developing a MERN stack application with the main goal of data collection and analysis. Looking forward I'm excited to solve problems through software, build things, and continue learning in such a vast field.
 
 ## Skills
 
@@ -35,7 +35,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MirandaRan
 
 
 ## Highlighted Projects
-**Ensamble: a web app for band and musician matching** [[GitHub](https://github.com/miranda0129/band-meetup-website)]: Utalizing basic web technologies such as HTML, CSS, Javascript and PHP Ensamble is a web app for bands to post ads looking for other musicians to collaborate with and musicians to find gigs and collaborators.
+**Ensamble: a web app for band and musician matching** [[GitHub](https://github.com/miranda0129/band-meetup-website)]: Utalizing basic web technologies such as HTML, CSS, Javascript and PHP, Ensamble is a web app for bands to post ads looking for other musicians to collaborate with and musicians to find gigs and collaborators.
 
 **The Hype Machine** [[GitHub](https://devpost.com/software/the-hype-machine)]: The Hype Machine is a fun and silly hackathon project exploring the SonicPi language in which you can code music. A python scripts determines if an electric longboard is moving and when it is, plays the SonicPi coded music file.
 
@@ -58,4 +58,3 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MirandaRan
 - LinkedIn PowerBI Essential Training (2020)
 - Guitarist
 - Fiction and Non-fiction reader
-- Intentional Living
