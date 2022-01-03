@@ -1,6 +1,6 @@
 # Miranda Ransom . Jarvis Consulting
 
-I joined Jarvis right after graduatating with my BCS[H] - Computer Science from the Univerristy of Windsor. I've aimed to join my theoretical background with practical applicatioin through my exteracurriculars such as hackathons and joning the Google Developers Student Club as a core member. I've also had the opperunity to work with a local-non profit as part of their tech team developing a MERN stack application with the main goal of data collection and analysis. Looking forward I'm excited to solve problems through software, build things, and continue learning in such a vast field.
+I joined Jarvis right after graduatating with my BCS[H] - Computer Science from the University of Windsor. I've aimed to join my theoretical background with practical application through my exteracurriculars such as hackathons and joning the Google Developers Student Club as a core member. I've also had the opperunity to work with a local-non profit as part of their tech team developing a MERN stack application with the main goal of data collection and analysis. Looking forward I'm excited to solve problems through software, build things, and continue learning in such a vast field.
 
 ## Skills
 
@@ -58,4 +58,3 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MirandaRan
 - LinkedIn PowerBI Essential Training (2020)
 - Guitarist
 - Fiction and Non-fiction reader
-- Intentional Living
