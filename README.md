@@ -1,6 +1,6 @@
 # Miranda Ransom . Jarvis Consulting
 
-I joined Jarvis right after graduating with my BCS[H] - Computer Science from the University of Windsor. I've aimed to join my theoretical background with practical application through my exteracurriculars such as hackathons and joning the Google Developers Student Club as a core member. I've also had the opportunity to work with a local-non profit as part of their tech team developing a MERN stack application with the main goal of data collection and analysis. Looking forward I'm excited to solve problems through software, build things, and continue learning in such a vast field.
+I joined Jarvis right after graduatating with my BCS[H] - Computer Science from the University of Windsor. I've aimed to join my theoretical background with practical application through my exteracurriculars such as hackathons and joning the Google Developers Student Club as a core member. I've also had the opperunity to work with a local-non profit as part of their tech team developing a MERN stack application with the main goal of data collection and analysis. Looking forward I'm excited to solve problems through software, build things, and continue learning in such a vast field.
 
 ## Skills
 
@@ -42,7 +42,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MirandaRan
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2020-present)**: Complete SCRUM tickets under the agile methodology to build out multiple projects.  Projects include a cluster monitor focusing on strengthening Linux and RDBMS skills.
+**Software Developer, Jarvis (2021-present)**: Complete SCRUM tickets under the agile methodology to build out multiple projects.  Projects include a cluster monitor focusing on strengthening Linux and RDBMS skills.
 
 **Tech Team Member, Windsor Essex Community Compassion Care (2020-2021)**: Build out an all encompassing MERN stack web application to aid in business needs. My focus was on the front end working with React, Material UI, Survey.js and Chart.js to design components (pages) to aid in user profiles, data collection, and analysis.
 
@@ -58,4 +58,3 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MirandaRan
 - LinkedIn PowerBI Essential Training (2020)
 - Guitarist
 - Fiction and Non-fiction reader
-

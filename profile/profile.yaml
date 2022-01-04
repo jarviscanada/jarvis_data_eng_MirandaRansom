@@ -81,7 +81,7 @@ professional_experience:
   #Write your Jarvis role as a professional experience rather than training.
   - title: "Software Developer"
     company: "Jarvis"
-    duration: "2020-present"
+    duration: "2021-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: "Complete SCRUM tickets under the agile methodology to build out multiple projects.  Projects include a cluster monitor focusing on strengthening Linux and RDBMS skills."
   - title: "Tech Team Member"
