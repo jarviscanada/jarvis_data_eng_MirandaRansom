@@ -35,14 +35,14 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MirandaRan
 
 
 ## Highlighted Projects
-**Ensamble: a web app for band and musician matching** [[GitHub](https://github.com/miranda0129/band-meetup-website)]: Utalizing basic web technologies such as HTML, CSS, Javascript and PHP Ensamble is a web app for bands to post ads looking for other musicians to collaborate with and musicians to find gigs and collaborators.
+**Ensamble: a web app for band and musician matching** [[GitHub](https://github.com/miranda0129/band-meetup-website)]: Utalizing basic web technologies such as HTML, CSS, Javascript and PHP, Ensamble is a web app for bands to post ads looking for other musicians to collaborate with and musicians to find gigs and collaborators.
 
 **The Hype Machine** [[GitHub](https://devpost.com/software/the-hype-machine)]: The Hype Machine is a fun and silly hackathon project exploring the SonicPi language in which you can code music. A python scripts determines if an electric longboard is moving and when it is, plays the SonicPi coded music file.
 
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2020-present)**: Complete SCRUM tickets under the agile methodology to build out multiple projects.  Projects include a cluster monitor focusing on strengthening Linux and RDBMS skills.
+**Software Developer, Jarvis (2021-present)**: Complete SCRUM tickets under the agile methodology to build out multiple projects.  Projects include a cluster monitor focusing on strengthening Linux and RDBMS skills.
 
 **Tech Team Member, Windsor Essex Community Compassion Care (2020-2021)**: Build out an all encompassing MERN stack web application to aid in business needs. My focus was on the front end working with React, Material UI, Survey.js and Chart.js to design components (pages) to aid in user profiles, data collection, and analysis.
 
@@ -58,3 +58,4 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MirandaRan
 - LinkedIn PowerBI Essential Training (2020)
 - Guitarist
 - Fiction and Non-fiction reader
+
