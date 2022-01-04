@@ -58,3 +58,4 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MirandaRan
 - LinkedIn PowerBI Essential Training (2020)
 - Guitarist
 - Fiction and Non-fiction reader
+
