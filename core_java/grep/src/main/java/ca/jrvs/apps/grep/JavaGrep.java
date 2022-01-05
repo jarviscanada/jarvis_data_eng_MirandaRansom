@@ -43,7 +43,7 @@ public interface JavaGrep {
    */
   void writeToFile(List<String> lines) throws IOException;
 
-  String setRootPath();
+  String getRootPath();
 
   void setRootPath(String rootPath);
 
