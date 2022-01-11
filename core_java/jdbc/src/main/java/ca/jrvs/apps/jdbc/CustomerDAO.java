@@ -14,8 +14,7 @@ public class CustomerDAO extends DataAccessObject<Customer> {
     private static final String GET_ONE = "SELECT customer_id, first_name, last_name, email, phone, address, city, state, zipcode " +
             "FROM customer WHERE customer_id = ?";
 
-    private static final String UPDATE = "UPDATE customer SET first_name = ?, last_name = ?, " +
-            "email = ?, phone = ?, address = ?, city = ?, state = ?, zipcode = ?" +
+    private static final String UPDATE = "UPDATE customer SET first_name = ?, last_name = ?, email = ?, phone = ?, address = ?, city = ?, state = ?, zipcode = ?" +
             "WHERE customer_id = ?";
 
     private static final String DELETE = "DELETE FROM customer WHERE customer_id = ?";
@@ -57,6 +56,12 @@ public class CustomerDAO extends DataAccessObject<Customer> {
     public Customer update(Customer dto) {
         Customer customer = null;
         try{
+            this.connection.setAutoCommit(false);
+        }catch(SQLException e){
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        try{
             PreparedStatement statement = this.connection.prepareStatement(UPDATE);
             statement.setString(1, dto.getFirstName());
             statement.setString(2, dto.getLastName());
@@ -68,10 +73,17 @@ public class CustomerDAO extends DataAccessObject<Customer> {
             statement.setString(8, dto.getZipCode());
             statement.setLong(9, dto.getId());
             statement.execute();
+            this.connection.commit();
             customer = this.findById(dto.getId());
             statement.close();
             return customer;
         }catch(SQLException e){
+            try{
+                this.connection.rollback();
+            }catch (SQLException sqle){
+                e.printStackTrace();
+                throw new RuntimeException(sqle);
+            }
             e.printStackTrace();
             throw new RuntimeException(e);
         }
