@@ -1,10 +1,12 @@
 # Introduction
-Java grep is an implementation of grep in the Java language. The purpose of this project is to develop core java knowledge.  JavaGrepImp uses java.util.regex to match a given pattern, java.io for file io and slf4j logger.  JavaGrepLambdaImp extends JavaGrepImp to use streams for listing files and reading lines rather than the for loops originally implemented. The project is managed with Maven and has been deployed with docker. 
+Java grep is an implementation of grep in the Java language. The purpose of this project is to develop core java knowledge.  JavaGrepImp uses `java.util.regex` to match a given pattern, `java.io` for file io and `slf4j` logger.  `JavaGrepLambdaImp` extends `JavaGrepImp` to use streams for listing files and reading lines rather than the for loops originally implemented. The project is managed with Maven and has been deployed with docker. 
 
 # Quick Start
-usage
 ```
-JavaGrep regex rootPath outFile
+docker pull mkr0129/grep
+docker run --rm \
+-v 'pwd'/data:/data -v 'pwd'/log:log \
+mkr0129/grep search.* /data /log/grep.out
 ```
 
 

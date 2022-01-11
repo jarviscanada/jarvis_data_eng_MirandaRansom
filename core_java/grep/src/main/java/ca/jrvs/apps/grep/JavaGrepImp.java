@@ -105,7 +105,7 @@ public class JavaGrepImp implements JavaGrep{
         lines.add(line);
       }
     } catch (IOException e) {
-      e.printStackTrace();
+      throw new RuntimeException("Unable to read file", e);
     }
     return lines;
   }

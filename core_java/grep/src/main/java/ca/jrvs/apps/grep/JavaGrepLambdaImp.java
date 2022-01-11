@@ -27,7 +27,7 @@ public class JavaGrepLambdaImp extends JavaGrepImp{
     try{
       javaGrepLambdaImp.process();
     } catch (Exception e){
-      e.printStackTrace();
+      throw new RuntimeException("Unable to process", e);
     }
 
   }
@@ -52,7 +52,7 @@ public class JavaGrepLambdaImp extends JavaGrepImp{
       BufferedReader bufferedReader = new BufferedReader(fileReader);
       lines = bufferedReader.lines().collect(Collectors.toList());
     }catch (IOException e) {
-      e.printStackTrace();
+      throw new RuntimeException("Unable to read file", e);
     }
     return lines;
   }
