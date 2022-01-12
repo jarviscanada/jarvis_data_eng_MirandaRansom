@@ -32,8 +32,8 @@
     {
       "description": [
         "Twitter App:",
-        "JDBC App:",
-        "Grep App:"
+        "JDBC App: Programmed CustomerDAO which extends DataAccessObject to gain experience in JDBC and the DAO design pattern. Methods implemented include findById, update, create and delete. Transactions were also explored in the update method by turning off autocommit.",
+        "Grep App: Implemented the grep app in Java. To develop core Java knowledge java.util.regex was used along side java.io and the slf4j logger to recursively search a specified root directory for a regex pattern and write all matched lines to a file"
       ],
       "git_url": "/core_java",
       "name": "Core Java Apps"

@@ -20,8 +20,8 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MirandaRan
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MirandaRansom/tree/master/core_java)]:
       
   - Twitter App:
-  - JDBC App:
-  - Grep App:
+  - JDBC App: Programmed CustomerDAO which extends DataAccessObject to gain experience in JDBC and the DAO design pattern. Methods implemented include findById, update, create and delete. Transactions were also explored in the update method by turning off autocommit.
+  - Grep App: Implemented the grep app in Java. To develop core Java knowledge java.util.regex was used along side java.io and the slf4j logger to recursively search a specified root directory for a regex pattern and write all matched lines to a file
 
 **Springboot App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MirandaRansom/tree/master/springboot)]: Not Started
 
