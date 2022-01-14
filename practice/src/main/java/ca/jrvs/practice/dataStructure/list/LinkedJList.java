@@ -97,8 +97,9 @@ public class LinkedJList<E> implements JList<E>{
     int index = 0;
     if (o == null){
       for (Node<E> x = first; x != null; x = x.next){
-        if (x.item == null);
-        return index;
+        if (x.item == null) {
+          return index;
+        }
       }
       index++;
     } else {
