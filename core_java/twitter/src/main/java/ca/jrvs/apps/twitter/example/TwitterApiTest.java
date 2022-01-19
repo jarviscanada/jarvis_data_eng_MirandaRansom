@@ -1,4 +1,4 @@
-package ca.jrvs.apps.twitter;
+package ca.jrvs.apps.twitter.example;
 
 import com.google.gdata.util.common.base.PercentEscaper;
 import java.util.Arrays;
