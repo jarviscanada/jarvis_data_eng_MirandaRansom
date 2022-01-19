@@ -14,7 +14,7 @@ public class fibonacciStairs {
   }
 
   public static int dynamicFib(int num){
-    int memo[] = new int[num];
+    int[] memo = new int[num];
     memo[0] = 1;
     memo[1] = 1;
 

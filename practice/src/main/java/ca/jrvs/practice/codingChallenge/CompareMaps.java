@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * Ticket: https://www.notion.so/jarvisdev/How-to-compare-two-maps-187f9bc323f14195949c94bed7a7eb45
  */
-public class compareMaps {
+public class CompareMaps {
   /**
    *  Problem: compare 2 maps in Java
    *

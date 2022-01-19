@@ -3,7 +3,7 @@ package ca.jrvs.practice.codingChallenge;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class fibonacciStairsTest {
+public class FibonacciStairsTest {
   @Test
   public void testRecursiveFib(){
     Assert.assertEquals(5, fibonacciStairs.recursiveFib(5));

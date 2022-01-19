@@ -1,13 +1,12 @@
 package ca.jrvs.practice.codingChallenge;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * ticket: https://www.notion.so/jarvisdev/Two-Sum-4623734546204613ba8acad8795d4d6b
  */
-public class twoSum {
+public class TwoSum {
 
   public static int[] twoSumNaive(int[] arr, int target) {
     for (int i = 0; i < arr.length; i++) {
