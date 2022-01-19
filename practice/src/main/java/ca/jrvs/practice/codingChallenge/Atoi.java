@@ -28,6 +28,7 @@ public class Atoi {
     //set sign modifier accordingly
     if (index < n && num.charAt(index) == '-'){
       sign = -1;
+      index++;
     } else if (index < n && num.charAt(index) == '+'){
       sign = 1;
       index++;
