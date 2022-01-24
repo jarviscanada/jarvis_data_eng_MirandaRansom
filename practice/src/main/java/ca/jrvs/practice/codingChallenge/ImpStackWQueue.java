@@ -5,6 +5,12 @@ import java.util.Queue;
 
 /**
  * ticket: https://www.notion.so/jarvisdev/Implement-Stack-using-Queue-2b5637e90e55469687831297176d6e73
+ *
+ * time complexity:
+ * push O(n)
+ * pop O(1)
+ * peek O(1)
+ * in both implementations
  */
 public class ImpStackWQueue {
   //implement stack using 2 queues
