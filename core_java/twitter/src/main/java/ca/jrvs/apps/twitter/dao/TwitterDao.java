@@ -112,7 +112,7 @@ public class TwitterDao implements CrdDao<Tweet, String> {
     final Logger logger = LoggerFactory.getLogger(TwitterDao.class);
 
    TwitterDao dao = new TwitterDao(helper);
-   Tweet tweet = dao.findById("1484594280530423809");
+   Tweet tweet = dao.findById("1485674992738181128");
 
    logger.info(tweet.getText());
    logger.info(JsonUtils.toJson(tweet, true, true));

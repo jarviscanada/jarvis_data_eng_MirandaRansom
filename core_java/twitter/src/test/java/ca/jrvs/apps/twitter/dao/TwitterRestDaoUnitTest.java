@@ -1,4 +1,4 @@
-package ca.jrvs.apps.twitter;
+package ca.jrvs.apps.twitter.dao;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;

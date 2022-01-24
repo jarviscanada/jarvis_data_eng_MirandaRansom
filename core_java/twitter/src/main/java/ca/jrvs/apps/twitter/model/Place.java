@@ -8,6 +8,8 @@ import java.util.List;
 public class Place {
   @JsonProperty("full_name")
   private String location;
+  @JsonProperty("bounding_box")
+  private BoundingBox boundingBox;
 
   public String getLocation() {
     return location;
@@ -15,5 +17,13 @@ public class Place {
 
   public void setLocation(String location) {
     this.location = location;
+  }
+
+  public BoundingBox getBoundingBox() {
+    return boundingBox;
+  }
+
+  public void setBoundingBox(BoundingBox boundingBox) {
+    this.boundingBox = boundingBox;
   }
 }
