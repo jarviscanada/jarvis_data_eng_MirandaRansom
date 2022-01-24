@@ -24,7 +24,7 @@ public class TwitterApiTest {
     String username = "mkr0129";
     PercentEscaper percentEscaper = new PercentEscaper("", false);
     HttpGet request = new HttpGet(
-      "https://api.twitter.com/2/users/by/username/" + percentEscaper.escape(username));
+      "https://api.twitter.com/1.1/users/lookup.json?screen_name=" + percentEscaper.escape(username));
 
     consumer.sign(request);
 
