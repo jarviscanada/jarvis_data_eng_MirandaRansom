@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_MirandaRan
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: I joined Jarvis right after graduatating with my BCS[H] - Computer Science from the University of Windsor. I've aimed to join my theoretical background with practical application through my exteracurriculars such as hackathons and joning the Google Developers Student Club as a core member. I've also had the opportunity to work with a local-non profit as part of their tech team developing a MERN stack application with the main goal of data collection and analysis. Looking forward I'm excited to solve problems through software, build things, and continue learning in such a vast field.
+summary: I joined Jarvis right after graduating with my BCS[H] - Computer Science from the University of Windsor. I've aimed to join my theoretical background with practical application through my extracurriculars such as hackathons and joining the Google Developers Student Club as a core member. I've also had the opportunity to work with a local-non profit as part of their tech team developing a MERN stack application with the main goal of data collection and analysis. Looking forward I'm excited to solve problems through software, build things, and continue learning in such a vast field.
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
@@ -38,13 +38,13 @@ jarvis_projects:
     git_url: "/linux_sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "This project is used to log linux data and tracks potential outages. The script running on the network switch collects hardware and usage data from the nodes and logs them into a postgresql database. The nodes send hardware data on start up and then usage data every minute by the use of a crontab. An outage is detected when a node has not sent at least 3 data points in the past 5 minutes found via an SQL select query."
+    description: "This project is used to log Linux data and tracks potential outages. The script running on the network switch collects hardware and usage data from the nodes and logs them into a Postgresql database. The nodes send hardware data on startup and then usage data every minute by the use of a crontab. An outage is detected when a node has not sent at least 3 data points in the past 5 minutes found via an SQL select query."
   - name: "Core Java Apps"
     git_url: "/core_java"
     description:
       - "Twitter App:"
-      - "JDBC App: Programmed CustomerDAO which extends DataAccessObject to gain experience in JDBC and the DAO design pattern. Methods implemented include findById, update, create and delete. Transactions were also explored in the update method by turning off autocommit."
-      - "Grep App: Implemented the grep app in Java. To develop core Java knowledge java.util.regex was used along side java.io and the slf4j logger to recursively search a specified root directory for a regex pattern and write all matched lines to a file"
+      - "JDBC App: Programmed CustomerDAO which extends DataAccessObject to gain experience in JDBC and the DAO design pattern. Methods implemented include findById, update, create and delete. Transactions were also explored in the update method by turning off auto-commit."
+      - "Grep App: Implemented the grep app in Java. To develop core Java knowledge java.util.regex was used alongside java.io and the slf4j logger to recursively search a specified root directory for a regex pattern and write all matched lines to a file"
   - name: "Springboot App"
     git_url: "/springboot"
     description: ""
@@ -65,14 +65,14 @@ jarvis_projects:
 # Feel free to add more projects
 highlighted_projects:
     #project name
-  - name: "Ensamble: a web app for band and musician matching"
+  - name: "Ensemble: a web app for matching bands and musicians"
     #URL is optional
     git_url: "https://github.com/miranda0129/band-meetup-website"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Utalizing basic web technologies such as HTML, CSS, Javascript and PHP, Ensamble is a web app for bands to post ads looking for other musicians to collaborate with and musicians to find gigs and collaborators.
+    description: Utilizing basic web technologies such as HTML, CSS, Javascript and PHP, Ensamble is a web app for bands to post ads looking for other musicians to collaborate with and musicians to find gigs and collaborators.
   - name: "The Hype Machine"
     git_url: "https://devpost.com/software/the-hype-machine"
-    description: The Hype Machine is a fun and silly hackathon project exploring the SonicPi language in which you can code music. A python scripts determines if an electric longboard is moving and when it is, plays the SonicPi coded music file.
+    description: The Hype Machine is a fun and silly hackathon project exploring the SonicPi language in which you can code music. A python script determines if an electric longboard is moving and when it is, plays the SonicPi coded music file.
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
@@ -87,13 +87,13 @@ professional_experience:
   - title: "Tech Team Member"
     company: "Windsor Essex Community Compassion Care"
     duration: "2020-2021"
-    description: "Build out an all encompassing MERN stack web application to aid in business needs. My focus was on the front end working with React, Material UI, Survey.js and Chart.js to design components (pages) to aid in user profiles, data collection, and analysis."
+    description: "Build out an all-encompassing MERN stack web application to aid in business needs. My focus was on the front end working with React, Material UI, Survey.js and Chart.js to design components (pages) to aid in user profiles, data collection, and analysis."
   - title: "Teaching Assistant"
     company: "University of Windsor"
     duration: "2020-2021"
     description: "Held weekly office hours to aid students in understanding material and debugging code.  Duties also included marking assignments while providing meaningful feedback and virtual in-class assistance"
 
-#List of edcuation
+#List of education
 education: 
   - school_name: "University of Windsor"
     duration: "2017-2021"
