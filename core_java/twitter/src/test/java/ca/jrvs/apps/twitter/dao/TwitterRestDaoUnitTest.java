@@ -6,8 +6,9 @@ import static org.mockito.ArgumentMatchers.isNotNull;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.when;
 
+import ca.jrvs.apps.twitter.TweetUtils;
 import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
-import ca.jrvs.apps.twitter.example.JsonUtils;
+import ca.jrvs.apps.twitter.JsonUtils;
 import ca.jrvs.apps.twitter.model.Coordinates;
 import ca.jrvs.apps.twitter.model.Tweet;
 import org.junit.Assert;
@@ -34,12 +35,7 @@ public class TwitterRestDaoUnitTest {
     Double lat = 1d;
     Double lon = -1d;
     try {
-      Tweet postTweet = new Tweet();
-      Coordinates coordinates = new Coordinates();
-      coordinates.setCoordinates(new double[] {lon, lat});
-      postTweet.setText(text);
-      postTweet.setCoordinates(coordinates);
-
+      Tweet postTweet = TweetUtils.buildTweet(text, lon, lat);
       dao.create(postTweet);
     } catch (RuntimeException e) {
       Assert.assertTrue(true);

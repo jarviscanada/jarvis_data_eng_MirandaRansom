@@ -4,8 +4,12 @@ import ca.jrvs.apps.twitter.model.Tweet;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class TwitterService implements Service {
@@ -38,8 +42,15 @@ public class TwitterService implements Service {
       throw new RuntimeException("Tweet length exceeds 140 characters");
     }
 
-    //TODO validate lat/lon range
-    //work around with place instead of coordinates, speak to senior developer about model
+    //validate lat/lon values
+    double lon = tweet.getCoordinates().getCoordinates()[0];
+    double lat = tweet.getCoordinates().getCoordinates()[1];
+    if (lon > 90 || lon < -90) {
+      throw new RuntimeException("Tweet lon invalid");
+    }
+    if (lat > 180 || lat < -180) {
+      throw new RuntimeException("Tweet lat is invalid");
+    }
   }
 
   /**
@@ -95,6 +106,16 @@ public class TwitterService implements Service {
    */
   @Override
   public List<Tweet> deleteTweets(String[] ids) {
-    return null;
+    List<Tweet> tweets = new ArrayList<>();
+
+    for (String id : ids) {
+      try {
+        Tweet deletedTweet = (Tweet) dao.deleteById(id);
+        tweets.add(deletedTweet);
+      } catch (RuntimeException e) {
+        System.out.println("Unable to find tweet of id" + id);
+      }
+    }
+    return tweets;
   }
 }

@@ -1,4 +1,4 @@
-package ca.jrvs.apps.twitter.example;
+package ca.jrvs.apps.twitter;
 
 import ca.jrvs.apps.twitter.model.Tweet;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

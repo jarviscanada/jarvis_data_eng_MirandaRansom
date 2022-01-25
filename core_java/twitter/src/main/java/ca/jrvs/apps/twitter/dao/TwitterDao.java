@@ -1,18 +1,14 @@
 package ca.jrvs.apps.twitter.dao;
 
 import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
-import ca.jrvs.apps.twitter.dao.helper.TwitterHttpHelper;
-import ca.jrvs.apps.twitter.example.JsonUtils;
+import ca.jrvs.apps.twitter.JsonUtils;
 import ca.jrvs.apps.twitter.model.Coordinates;
 import ca.jrvs.apps.twitter.model.Tweet;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gdata.util.common.base.PercentEscaper;
 import java.io.IOException;
 import java.net.URI;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class TwitterDao implements CrdDao<Tweet, String> {
@@ -109,22 +105,5 @@ public class TwitterDao implements CrdDao<Tweet, String> {
       throw new RuntimeException("Unable to parse json into object", e);
     }
     return tweet;
-  }
-
-  public static void main(String[] args) throws JsonProcessingException {
-    TwitterHttpHelper helper = new TwitterHttpHelper(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, TOKEN_SECRET);
-    final Logger logger = LoggerFactory.getLogger(TwitterDao.class);
-
-   TwitterDao dao = new TwitterDao(helper);
-   Tweet create = new Tweet();
-   create.setText("five cups of green tea with honey");
-   Coordinates cord = new Coordinates();
-
-   create.setCoordinates(cord);
-   logger.info(create.toString());
-   Tweet tweet = dao.create(create);
-
-   logger.info(tweet.getText());
-   logger.info(JsonUtils.toJson(tweet, true, true));
   }
 }

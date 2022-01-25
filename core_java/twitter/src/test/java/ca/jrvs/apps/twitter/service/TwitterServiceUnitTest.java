@@ -1,25 +1,40 @@
 package ca.jrvs.apps.twitter.service;
 
-import ca.jrvs.apps.twitter.dao.TwitterDao;
-import ca.jrvs.apps.twitter.dao.helper.TwitterHttpHelper;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
+
+import ca.jrvs.apps.twitter.TweetUtils;
+import ca.jrvs.apps.twitter.dao.CrdDao;
 import ca.jrvs.apps.twitter.model.Tweet;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 
+@RunWith(MockitoJUnitRunner.class)
 public class TwitterServiceUnitTest {
-  private static String CONSUMER_KEY = System.getenv("consumerKey");
-  private static String CONSUMER_SECRET = System.getenv("consumerSecret");
-  private static String ACCESS_TOKEN = System.getenv("accessToken");
-  private static String TOKEN_SECRET = System.getenv("tokenSecret");
+  @Mock
+  CrdDao dao;
 
-  TwitterHttpHelper helper = new TwitterHttpHelper(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, TOKEN_SECRET);
-  TwitterDao dao = new TwitterDao(helper);
+  @InjectMocks
+  TwitterService service;
 
   @Test
-  public void testShowTweet(){
-    TwitterService service = new TwitterService(dao);
-    String[] fields = {"place", "id_str", "text"};
-    Tweet filteredTweet = service.showTweet("1485674992738181128", fields);
-    System.out.println(filteredTweet.toString());
+  public void testPostTweet() {
+    when(dao.create(any())).thenReturn(new Tweet());
+    service.postTweet(TweetUtils.buildTweet("test", -1, 1));
   }
 
+  @Test
+  public void testShowTweet() {
+    when(dao.findById(any())).thenReturn(new Tweet());
+    service.showTweet(any(), new String[] {"text"});
+  }
+
+  @Test
+  public void testDeleteTweet() {
+    when(dao.deleteById(any())).thenReturn(new Tweet());
+    service.deleteTweets(new String[] {"123456"});
+  }
 }

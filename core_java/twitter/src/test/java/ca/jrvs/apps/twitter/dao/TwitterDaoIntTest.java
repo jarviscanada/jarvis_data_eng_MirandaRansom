@@ -1,12 +1,10 @@
 package ca.jrvs.apps.twitter.dao;
 
+import ca.jrvs.apps.twitter.TweetUtils;
 import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
-import ca.jrvs.apps.twitter.dao.TwitterDao;
 import ca.jrvs.apps.twitter.dao.helper.TwitterHttpHelper;
-import ca.jrvs.apps.twitter.example.JsonUtils;
-import ca.jrvs.apps.twitter.model.Coordinates;
+import ca.jrvs.apps.twitter.JsonUtils;
 import ca.jrvs.apps.twitter.model.Tweet;
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,18 +29,13 @@ public class TwitterDaoIntTest {
   public void TestCreateInt() throws Exception {
     String hashtag = "#TwitterAPI";
     String text = "Aries has some pretty good bangers huh?" + hashtag;
-    Coordinates coordinates = new Coordinates();
-    coordinates.setCoordinates(new double[] {-1, 1});
+    Tweet postTweet = TweetUtils.buildTweet(text, -1, 1);
 
-    Tweet postTweet = new Tweet();
-    postTweet.setText(text);
-    postTweet.setCoordinates(coordinates);
 
     System.out.println(JsonUtils.toJson(postTweet, true, false));
     Tweet tweet = dao.create(postTweet);
 
     Assert.assertEquals(text, tweet.getText());
-    Assert.assertTrue(hashtag.contains(tweet.getEntities().getHashtags().get(0).getText()));
   }
 
   @Test
@@ -57,12 +50,9 @@ public class TwitterDaoIntTest {
 
   @Test
   public void TestDelete() {
-    Tweet post = new Tweet();
-    Coordinates coordinates = new Coordinates();
-    coordinates.setCoordinates(new double[] {-1, 1});
+    String text = "testing delete functionality";
+    Tweet post = TweetUtils.buildTweet(text, -1, 1);
 
-    post.setText("testing delete functionality");
-    post.setCoordinates(coordinates);
     Tweet postedTweet = dao.create(post);
     String id = postedTweet.getId_str();
 
