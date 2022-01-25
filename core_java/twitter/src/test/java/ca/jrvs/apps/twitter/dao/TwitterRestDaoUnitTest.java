@@ -6,10 +6,9 @@ import static org.mockito.ArgumentMatchers.isNotNull;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.when;
 
-import ca.jrvs.apps.twitter.dao.TwitterDao;
 import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
 import ca.jrvs.apps.twitter.example.JsonUtils;
-import ca.jrvs.apps.twitter.model.Place;
+import ca.jrvs.apps.twitter.model.Coordinates;
 import ca.jrvs.apps.twitter.model.Tweet;
 import org.junit.Assert;
 import org.junit.Test;
@@ -34,10 +33,12 @@ public class TwitterRestDaoUnitTest {
     String text = "@mkr0129 learning Mockito and Unit testing " + hashtag;
     Double lat = 1d;
     Double lon = -1d;
-    when(mockHelper.httpPost(isNotNull())).thenThrow(new RuntimeException("mock"));
     try {
       Tweet postTweet = new Tweet();
+      Coordinates coordinates = new Coordinates();
+      coordinates.setCoordinates(new double[] {lon, lat});
       postTweet.setText(text);
+      postTweet.setCoordinates(coordinates);
 
       dao.create(postTweet);
     } catch (RuntimeException e) {
@@ -79,7 +80,9 @@ public class TwitterRestDaoUnitTest {
     doReturn(expectedTweet).when(spyDao).processResponseToTweet(any(), anyInt());
 
     Tweet postTweet = new Tweet();
-    Place cord = new Place();
+    Coordinates cord = new Coordinates();
+    cord.setCoordinates(new double[] {lon, lat});
+    postTweet.setCoordinates(cord);
     postTweet.setText(text);
 
     Tweet tweet = spyDao.create(postTweet);

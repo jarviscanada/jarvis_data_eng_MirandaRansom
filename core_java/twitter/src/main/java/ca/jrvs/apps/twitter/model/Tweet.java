@@ -16,8 +16,8 @@ public class Tweet {
   private String text;
   @JsonProperty("entities")
   private Entities entities;
-  @JsonProperty("place")
-  private Place place;
+  @JsonProperty("coordinates")
+  private Coordinates coordinates;
   @JsonProperty("retweet_count")
   private Integer retweet_count;
   @JsonProperty("favorite_count")
@@ -77,14 +77,14 @@ public class Tweet {
     this.entities = entities;
   }
 
-  @JsonProperty("place")
-  public Place getPlace() {
-    return place;
+  @JsonProperty("coordinates")
+  public Coordinates getCoordinates() {
+    return coordinates;
   }
 
-  @JsonProperty("place")
-  public void setPlace(Place place) {
-    this.place = place;
+  @JsonProperty("coordinates")
+  public void setCoordinates(Coordinates coordinates) {
+    this.coordinates = coordinates;
   }
 
   @JsonProperty("retweet_count")
@@ -135,7 +135,7 @@ public class Tweet {
         "\tid_str=" + id_str + "\n" +
         "\ttext=" + text + "\n" +
         "\tentities=" + entities + "\n" +
-        "\tplace=" + place + "\n" +
+        "\tcoordinates=" + coordinates + "\n" +
         "\tretweet_count=" + retweet_count + "\n" +
         "\tfavorite_count=" + favorite_count + "\n" +
         "\tfavorited=" + favorited + "\n" +

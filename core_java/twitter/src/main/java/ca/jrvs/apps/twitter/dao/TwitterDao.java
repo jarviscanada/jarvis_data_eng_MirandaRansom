@@ -3,13 +3,13 @@ package ca.jrvs.apps.twitter.dao;
 import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
 import ca.jrvs.apps.twitter.dao.helper.TwitterHttpHelper;
 import ca.jrvs.apps.twitter.example.JsonUtils;
+import ca.jrvs.apps.twitter.model.Coordinates;
 import ca.jrvs.apps.twitter.model.Tweet;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gdata.util.common.base.PercentEscaper;
 import java.io.IOException;
 import java.net.URI;
 import org.apache.http.HttpResponse;
-import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -53,7 +53,11 @@ public class TwitterDao implements CrdDao<Tweet, String> {
   public Tweet create(Tweet entity) {
     PercentEscaper percentEscaper = new PercentEscaper("", false);
     String text = entity.getText();
-    URI uri = URI.create(API_BASE_URI + POST_PATH + QUERY_SYM + "status=" + percentEscaper.escape(text));
+    Coordinates coordinates = entity.getCoordinates();
+    double lat = coordinates.getCoordinates()[1];
+    double lon = coordinates.getCoordinates()[0];
+    URI uri = URI.create(API_BASE_URI + POST_PATH + QUERY_SYM + "status=" + percentEscaper.escape(text) +
+        AMPERSAND + "lat=" + lat + AMPERSAND + "lon=" + lon);
     HttpResponse response = httpHelper.httpPost(uri);
     return processResponseToTweet(response, HTTP_OK);
   }
@@ -112,11 +116,15 @@ public class TwitterDao implements CrdDao<Tweet, String> {
     final Logger logger = LoggerFactory.getLogger(TwitterDao.class);
 
    TwitterDao dao = new TwitterDao(helper);
-   Tweet tweet = dao.findById("1485674992738181128");
+   Tweet create = new Tweet();
+   create.setText("five cups of green tea with honey");
+   Coordinates cord = new Coordinates();
+
+   create.setCoordinates(cord);
+   logger.info(create.toString());
+   Tweet tweet = dao.create(create);
 
    logger.info(tweet.getText());
    logger.info(JsonUtils.toJson(tweet, true, true));
-   logger.info(tweet.getPlace().getLocation());
-   logger.info(tweet.getEntities().getUserMentions().toString());
   }
 }
