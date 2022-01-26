@@ -16,7 +16,7 @@ public class TwitterService implements Service {
 
   private CrdDao dao;
 
-  @Autowired
+  //@Autowired
   public TwitterService(CrdDao dao) {
     this.dao = dao;
   }
@@ -63,7 +63,11 @@ public class TwitterService implements Service {
    */
   @Override
   public Tweet showTweet(String id, String[] fields) {
-    return filterFields((Tweet) dao.findById(id), fields);
+    Tweet tweet = (Tweet) dao.findById(id);
+    if (fields != null) {
+      tweet = filterFields(tweet, fields);
+    }
+    return tweet;
   }
 
   private Tweet filterFields(Tweet tweet, String[] fields) {

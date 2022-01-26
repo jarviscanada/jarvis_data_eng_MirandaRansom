@@ -33,7 +33,7 @@ public class TwitterDao implements CrdDao<Tweet, String> {
   private static final int HTTP_OK = 200;
   private HttpHelper httpHelper;
 
-  @Autowired
+  //@Autowired
   public TwitterDao (HttpHelper httpHelper) {
     this.httpHelper = httpHelper;
   }
