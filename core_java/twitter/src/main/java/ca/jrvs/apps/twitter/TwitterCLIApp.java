@@ -8,21 +8,25 @@ import ca.jrvs.apps.twitter.model.Tweet;
 import ca.jrvs.apps.twitter.service.TwitterService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TwitterCLIApp {
   public static final String USAGE = "USAGE: TwitterCLIApp post|show|delete [options]";
 
   private Controller controller;
 
+  @Autowired
   public TwitterCLIApp(Controller controller) { this.controller = controller; }
 
   public static void main(String[] args) {
-    String CONSUMER_KEY = System.getenv("consumerKey");
-    String CONSUMER_SECRET = System.getenv("consumerSecret");
-    String ACCESS_TOKEN = System.getenv("accessToken");
-    String TOKEN_SECRET = System.getenv("tokenSecret");
+    String consumerKey = System.getenv("consumerKey");
+    String consumerSecret = System.getenv("consumerSecret");
+    String accessToken = System.getenv("accessToken");
+    String tokenSecret = System.getenv("tokenSecret");
 
-    TwitterHttpHelper helper = new TwitterHttpHelper(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, TOKEN_SECRET);
+    TwitterHttpHelper helper = new TwitterHttpHelper(consumerKey, consumerSecret, accessToken, tokenSecret);
     TwitterDao dao = new TwitterDao(helper);
     TwitterService service = new TwitterService(dao);
     TwitterController controller = new TwitterController(service);

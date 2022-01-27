@@ -22,7 +22,7 @@ public class TwitterServiceIntTest {
   public void testShowTweet(){
     TwitterService service = new TwitterService(dao);
     String[] fields = {"place", "id_str", "text"};
-    Tweet filteredTweet = service.showTweet("1485674992738181128", fields);
+    Tweet filteredTweet = service.showTweet("1486465802815614981", fields);
     System.out.println(filteredTweet.toString());
   }
 
@@ -43,5 +43,4 @@ public class TwitterServiceIntTest {
     Tweet createdTweet = service.postTweet(tweet);
     Assert.assertEquals(tweet.getText(), createdTweet.getText());
   }
-
 }
