@@ -1,9 +1,13 @@
 package ca.jrvs.practice.codingChallenge;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
+/**
+ * ticket: https://www.notion.so/jarvisdev/Valid-Palindrome-b1b053a2c04046bda20979a3636aaec7
+ *
+ * time complexity:
+ * pointers approach: O(n)
+ * recursive approach: O(n)
+ */
 public class ValidPalindrome {
   public static boolean isValidPointers(String string) {
     if (string == null) {
