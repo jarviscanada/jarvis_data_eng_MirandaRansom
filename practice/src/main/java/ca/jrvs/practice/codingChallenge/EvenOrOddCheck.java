@@ -3,7 +3,7 @@ package ca.jrvs.practice.codingChallenge;
 /**
  * ticket: https://www.notion.so/jarvisdev/Sample-Check-if-a-number-is-even-or-odd-2ab008d921d8471ea5a0cc6c63e4b020
  */
-class evenOrOddCheck {
+class EvenOrOddCheck {
 
   /**
    * Big-O: O(1)

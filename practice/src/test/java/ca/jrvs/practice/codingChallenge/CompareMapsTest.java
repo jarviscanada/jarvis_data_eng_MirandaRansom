@@ -5,7 +5,7 @@ import java.util.Map;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class compareMapsTest {
+public class CompareMapsTest {
 
   @Test
   public void testCompareMapsJavaAPI(){
@@ -18,8 +18,8 @@ public class compareMapsTest {
     Map<Integer, String> m3 = new HashMap<>();
     m3.put(1, "other data");
 
-    Assert.assertTrue(compareMaps.compareMapsJavaAPI(m1, m2));
-    Assert.assertFalse(compareMaps.compareMapsJavaAPI(m2, m3));
+    Assert.assertTrue(CompareMaps.compareMapsJavaAPI(m1, m2));
+    Assert.assertFalse(CompareMaps.compareMapsJavaAPI(m2, m3));
   }
 
 }
