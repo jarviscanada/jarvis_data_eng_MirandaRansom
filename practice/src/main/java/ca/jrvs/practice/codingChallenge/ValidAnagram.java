@@ -30,9 +30,6 @@ public class ValidAnagram {
   }
 
   public static boolean isAnagramHash(String string1, String string2) {
-    if (string1.length() != string2.length()) {
-      return false;
-    }
     char[] array1 = string1.toCharArray();
     char[] array2 = string2.toCharArray();
     HashMap<Character, Integer> hash1 = new HashMap<>();
