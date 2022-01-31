@@ -22,4 +22,18 @@ public class CompareMapsTest {
     Assert.assertFalse(CompareMaps.compareMapsJavaAPI(m2, m3));
   }
 
+  @Test
+  public void testCompareMapsImplementEquals() {
+    Map<Integer, String> m1 = new HashMap<>();
+    m1.put(1, "value data");
+
+    Map<Integer, String> m2 = new HashMap<>();
+    m2.put(1, "value data");
+
+    Map<Integer, String> m3 = new HashMap<>();
+    m3.put(1, "other data");
+
+    Assert.assertTrue(CompareMaps.compareMapsImplementEquals(m1, m2));
+    Assert.assertFalse(CompareMaps.compareMapsImplementEquals(m2, m3));
+  }
 }
