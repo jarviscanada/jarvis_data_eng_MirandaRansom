@@ -3,16 +3,16 @@ package ca.jrvs.practice.codingChallenge;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class digitStringTest {
+public class DigitStringTest {
   @Test
   public void testASCIIMethod(){
     //fail path
     String failString = "fail test";
-    Assert.assertFalse(digitString.isDigitStringASCII(failString));
+    Assert.assertFalse(DigitString.isDigitStringASCII(failString));
 
     //happy path
     String passString = "900";
-    Assert.assertTrue(digitString.isDigitStringASCII(passString));
+    Assert.assertTrue(DigitString.isDigitStringASCII(passString));
 
   }
 
@@ -20,21 +20,21 @@ public class digitStringTest {
   public void testJavaAPIMethod() {
     //fail path
     String failString = "9,000";
-    Assert.assertFalse(digitString.isDigitStringJavaAPI(failString));
+    Assert.assertFalse(DigitString.isDigitStringJavaAPI(failString));
 
     //happy path
     String passString = "9000";
-    Assert.assertTrue(digitString.isDigitStringJavaAPI(passString));
+    Assert.assertTrue(DigitString.isDigitStringJavaAPI(passString));
   }
 
   @Test
   public void testRegexMethod(){
     //fail path
     String failString = "85.401";
-    Assert.assertFalse(digitString.isDigitStringRegex(failString));
+    Assert.assertFalse(DigitString.isDigitStringRegex(failString));
 
     //happy path
     String passString = "1001";
-    Assert.assertTrue(digitString.isDigitStringRegex(passString));
+    Assert.assertTrue(DigitString.isDigitStringRegex(passString));
   }
 }

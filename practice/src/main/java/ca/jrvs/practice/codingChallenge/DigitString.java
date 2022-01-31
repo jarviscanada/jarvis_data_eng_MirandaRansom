@@ -3,7 +3,7 @@ package ca.jrvs.practice.codingChallenge;
 /**
  * ticket: https://www.notion.so/jarvisdev/Check-if-a-String-contains-only-digits-13bc5cf4078247aea436555247186208
  */
-public class digitString {
+public class DigitString {
   public static boolean isDigitStringASCII(String string) {
     char[] stringArray = string.toCharArray();
 

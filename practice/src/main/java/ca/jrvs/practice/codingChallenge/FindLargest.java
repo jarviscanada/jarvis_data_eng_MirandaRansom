@@ -12,7 +12,7 @@ import java.util.NoSuchElementException;
  * stream approach: O(n)
  * Java API approach: O(n)
  */
-public class findLargest {
+public class FindLargest {
   public static Integer findLargestLoop(List<Integer> numbers){
     Integer max = numbers.get(0);
 
