@@ -1,4 +1,4 @@
-package ca.jrvs.practice;
+package ca.jrvs.practice.codingChallenge;
 
 import ca.jrvs.practice.codingChallenge.PrintLetterWithNumber;
 import org.junit.Assert;
