@@ -19,7 +19,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_MirandaRan
 
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_MirandaRansom/tree/master/core_java)]:
       
-  - Twitter App:
+  - Twitter App: Developed a CLI application to post, show and delete Tweets through Tweet ids. Common components including a controller layer, service layer, and a dao were used to implement the application. Jackson is used for serialization, Spring is used for dependency management, and JUnit supplemented with Mockito were used for testing.
   - JDBC App: Programmed CustomerDAO which extends DataAccessObject to gain experience in JDBC and the DAO design pattern. Methods implemented include findById, update, create and delete. Transactions were also explored in the update method by turning off auto-commit.
   - Grep App: Implemented the grep app in Java. To develop core Java knowledge java.util.regex was used alongside java.io and the slf4j logger to recursively search a specified root directory for a regex pattern and write all matched lines to a file
 
