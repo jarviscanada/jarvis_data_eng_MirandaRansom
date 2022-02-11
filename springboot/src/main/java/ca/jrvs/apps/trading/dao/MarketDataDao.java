@@ -82,7 +82,7 @@ public class MarketDataDao implements CrudRepository<IexQuote, String> {
     }
 
     String response = executeHttpGet(url.toString())
-        .orElseThrow(() -> new IllegalArgumentException("Invalid ticker"));
+        .orElseThrow(() -> new IllegalArgumentException("Invalid ticker" + url.toString()));
     JSONObject jsonObject = new JSONObject(response);
 
     //check and set length
