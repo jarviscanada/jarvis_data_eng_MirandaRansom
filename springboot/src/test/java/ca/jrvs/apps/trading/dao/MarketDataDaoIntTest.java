@@ -1,11 +1,10 @@
-package ca.jrvs.apps.tading.dao;
+package ca.jrvs.apps.trading.dao;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import ca.jrvs.apps.trading.MarketDataConfig;
-import ca.jrvs.apps.trading.dao.MarketDataDao;
 import ca.jrvs.apps.trading.model.domain.IexQuote;
 import java.io.IOException;
 import java.util.Arrays;
