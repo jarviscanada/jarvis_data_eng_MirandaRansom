@@ -17,7 +17,7 @@ public class TestConfig {
   @Bean
   public MarketDataConfig marketDataConfig() {
     MarketDataConfig marketDataConfig = new MarketDataConfig();
-    marketDataConfig.setHost("https://cloud.iexpis.com/v1/");
+    marketDataConfig.setHost("https://cloud.iexapis.com/v1");
     marketDataConfig.setToken(System.getenv("IEX_PUB_TOKEN"));
     return marketDataConfig;
   }
