@@ -25,7 +25,6 @@ public class QuoteDao implements CrudRepository<Quote, String> {
 
   private static final String TABLE_NAME = "quote";
   private static final String ID_COLUMN_NAME = "ticker";
-  private int count = 0;
 
   private JdbcTemplate jdbcTemplate;
   private SimpleJdbcInsert simpleJdbcInsert;
@@ -62,7 +61,6 @@ public class QuoteDao implements CrudRepository<Quote, String> {
     if (row != 1) {
     throw  new IncorrectResultSizeDataAccessException("Failed to insert", 1, row);
     }
-    count++;
   }
 
   /**
@@ -109,7 +107,6 @@ public class QuoteDao implements CrudRepository<Quote, String> {
   public void deleteAll() {
     String stmt = "DELETE FROM " + TABLE_NAME;
     this.jdbcTemplate.update(stmt);
-    count = 0;
   }
 
   /**
@@ -145,11 +142,14 @@ public class QuoteDao implements CrudRepository<Quote, String> {
   public void deleteById(String id) {
     String stmt = "DELETE FROM " + TABLE_NAME + " WHERE ticker=?";
     this.jdbcTemplate.update(stmt, id);
-    count--;
   }
 
   @Override
   public long count() {
+    String countSql = "SELECT COUNT(ticker) FROM " +
+        TABLE_NAME;
+    Long count = this.jdbcTemplate.queryForObject(countSql,
+        new Object[] {}, Long.class);
     return count;
   }
 
