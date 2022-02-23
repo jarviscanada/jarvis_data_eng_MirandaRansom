@@ -41,7 +41,7 @@ public class TraderAccountServiceIntTest {
     newTrader.setDob(new Date());
     newTrader.setCountry("Canada");
 
-    savedView = traderAccountService.createTraderAccountView(newTrader);
+    savedView = traderAccountService.createTraderAndAccount(newTrader);
     assertEquals(newTrader.getFirst_name(), savedView.getFirst_name());
     assertEquals(Double.valueOf(0), savedView.getAmount());
 
