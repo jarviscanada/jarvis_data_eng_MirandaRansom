@@ -44,7 +44,7 @@ public class AccountDaoIntTest {
 
     savedAccount = new Account();
     savedAccount.setId(1);
-    savedAccount.setTrader_id(1);
+    savedAccount.setTraderId(1);
     savedAccount.setAmount(100.00d);
     accountDao.save(savedAccount);
   }

@@ -5,7 +5,6 @@ import static org.junit.Assert.assertTrue;
 
 import ca.jrvs.apps.trading.TestConfig;
 import ca.jrvs.apps.trading.model.domain.Account;
-import ca.jrvs.apps.trading.model.domain.Position;
 import ca.jrvs.apps.trading.model.domain.Quote;
 import ca.jrvs.apps.trading.model.domain.SecurityOrder;
 import ca.jrvs.apps.trading.model.domain.Trader;
@@ -60,7 +59,7 @@ public class PositionDaoUnitTest {
 
     Account account = new Account();
     account.setId(1);
-    account.setTrader_id(1);
+    account.setTraderId(1);
     account.setAmount(100.00d);
     accountDao.save(account);
 

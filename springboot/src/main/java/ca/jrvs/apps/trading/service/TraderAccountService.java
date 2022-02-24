@@ -47,7 +47,7 @@ public class TraderAccountService {
 
     //create and save empty account under trader
     Account newAccount = new Account();
-    newAccount.setTrader_id(newTrader.getId());
+    newAccount.setTraderId(newTrader.getId());
     newAccount.setId(newTrader.getId());
     newAccount.setAmount(0d);
     accountDao.save(newAccount);
@@ -65,7 +65,6 @@ public class TraderAccountService {
     if (traderId == null) {
       throw new IllegalArgumentException("Trader id cannot be null");
     }
-
     Optional<Account> optionalAccount = accountDao.findById(traderId);
     if (!optionalAccount.isPresent()){
       throw new IllegalArgumentException("Account cannot be found for trader id: " + traderId);
@@ -105,7 +104,7 @@ public class TraderAccountService {
     Account account = optionalAccount.get();
     Double currentAmount = account.getAmount();
     account.setAmount(currentAmount + fund);
-    accountDao.updateOne(account);
+    accountDao.saveAndFlush(account);
 
     return account;
   }
@@ -137,7 +136,7 @@ public class TraderAccountService {
       throw new IllegalArgumentException("Insufficient funds");
     }
     account.setAmount(currentAmount - fund);
-    accountDao.updateOne(account);
+    accountDao.saveAndFlush(account);
 
     return account;
   }

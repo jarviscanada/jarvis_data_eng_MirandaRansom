@@ -1,10 +1,14 @@
 package ca.jrvs.apps.trading.model.domain;
 
-import org.springframework.stereotype.Repository;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Entity;
 
-@Repository
-public class SecurityOrder implements Entity<Integer>{
+@Entity
+public class SecurityOrder{
 
+  @Id
+  @GeneratedValue
   private Integer id;
   private Integer accountId;
   private String status;
@@ -13,7 +17,6 @@ public class SecurityOrder implements Entity<Integer>{
   private Double price;
   private String notes;
 
-  @Override
   public Integer getId() {
     return id;
   }

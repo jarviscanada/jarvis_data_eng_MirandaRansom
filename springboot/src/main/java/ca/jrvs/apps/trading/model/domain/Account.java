@@ -1,30 +1,31 @@
 package ca.jrvs.apps.trading.model.domain;
 
-import org.springframework.stereotype.Repository;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Entity;
 
-@Repository
-public class Account implements Entity<Integer>{
-
+@Entity
+public class Account{
+  @Id
+  @GeneratedValue
   private Integer id;
-  private Integer trader_id;
+  private Integer traderId;
   private Double amount;
 
-  @Override
   public Integer getId() {
     return id;
   }
 
-  @Override
   public void setId(Integer id) {
     this.id = id;
   }
 
-  public Integer getTrader_id() {
-    return trader_id;
+  public Integer getTraderId() {
+    return traderId;
   }
 
-  public void setTrader_id(Integer trader_id) {
-    this.trader_id = trader_id;
+  public void setTraderId(Integer traderId) {
+    this.traderId = traderId;
   }
 
   public Double getAmount() {

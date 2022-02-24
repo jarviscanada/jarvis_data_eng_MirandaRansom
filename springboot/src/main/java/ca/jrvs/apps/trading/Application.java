@@ -13,12 +13,14 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * For learning purposes, DataSource and Jdbc Template are manually configured
  */
 @SpringBootApplication(exclude = {JdbcTemplateAutoConfiguration.class,
-    DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+    DataSourceAutoConfiguration.class})
 public class Application implements CommandLineRunner {
 
   private Logger logger = LoggerFactory.getLogger(Application.class);

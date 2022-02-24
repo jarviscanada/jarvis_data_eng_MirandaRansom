@@ -46,7 +46,7 @@ public class TraderAccountServiceIntTest {
     assertEquals(Double.valueOf(0), savedView.getAmount());
 
     savedView.setAmount(100.00d);
-    accountDao.updateOne(savedView.getAccount());
+    accountDao.saveAndFlush(savedView.getAccount());
   }
 
   @Test
